@@ -1,0 +1,19 @@
+{
+  "name": "velunest-platform",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.15.9",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "pnpm dev:draw",
+    "dev:draw": "pnpm --filter @velunest/draw dev",
+    "dev:home": "pnpm --filter @velunest/home dev",
+    "build": "pnpm -r build",
+    "build:draw": "pnpm --filter @velunest/draw build",
+    "build:home": "pnpm --filter @velunest/home build",
+    "test": "pnpm --filter @velunest/draw test",
+    "test:e2e": "pnpm --filter @velunest/draw test:e2e",
+    "check:home": "pnpm --filter @velunest/home check",
+    "check:bundle": "node apps/draw/scripts/verify-bundle.mjs apps/draw/dist .env.test.local"
+  }
+}

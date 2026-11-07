@@ -1,0 +1,161 @@
+<!-- 将本文件全部内容复制到 sub2api「首页内容」配置。无需复制 Markdown 代码围栏。 -->
+<style>
+#vn-home{--vn-text:#1a1a1a;--vn-muted:#666;--vn-line:#e8e8e8;--vn-soft:#f7f7f7;background:#fff;color:var(--vn-text);color-scheme:light;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.6;min-height:100vh;text-align:left;-webkit-font-smoothing:antialiased}
+#vn-home *,#vn-home *::before,#vn-home *::after{box-sizing:border-box}
+#vn-home h1,#vn-home h2,#vn-home h3,#vn-home p,#vn-home figure{margin:0}
+#vn-home a{color:inherit;text-decoration:none;cursor:pointer;touch-action:manipulation}
+#vn-home a:focus-visible{outline:2px solid #171717;outline-offset:5px}
+#vn-home svg{display:block;flex-shrink:0;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;fill:none}
+#vn-home img{display:block;max-width:100%}
+#vn-home .vn-shell{width:min(1200px,calc(100% - 96px));margin-inline:auto}
+#vn-home .vn-skip{position:absolute;left:24px;top:-100px;z-index:10;background:#171717;color:#fff;padding:12px 18px;border-radius:12px}
+#vn-home .vn-skip:focus{top:16px}
+#vn-home .vn-header{min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+#vn-home .vn-brand{display:inline-flex;align-items:center;gap:10px;font-size:23px;letter-spacing:-.8px;font-weight:650;min-height:44px}
+#vn-home .vn-brand-mark{display:grid;place-items:center;width:33px;height:33px;border:1.5px solid #222;border-radius:11px}
+#vn-home .vn-brand-mark svg{width:20px;height:20px;stroke-width:1.8}
+#vn-home .vn-nav{display:flex;align-items:center;gap:30px;font-size:14px}
+#vn-home .vn-nav-link{display:inline-flex;align-items:center;gap:5px;min-height:44px;color:var(--vn-muted);transition:color .16s}
+#vn-home .vn-nav-link:hover{color:var(--vn-text)}
+#vn-home .vn-login{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 21px;border:1px solid #d8d8d8;border-radius:25px;transition:background .16s}
+#vn-home .vn-login:hover{background:var(--vn-soft)}
+#vn-home .vn-hero{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:76px;padding:68px 0 56px}
+#vn-home .vn-eyebrow{display:inline-flex;align-items:center;gap:8px;color:#595959;font-size:12px;letter-spacing:.5px;padding:7px 12px;border:1px solid var(--vn-line);border-radius:20px;margin-bottom:24px}
+#vn-home .vn-eyebrow::before{content:"";width:6px;height:6px;background:#54806c;border-radius:50%}
+#vn-home h1{font-size:clamp(44px,4.9vw,68px);line-height:1.2;font-weight:550;letter-spacing:-2.5px;text-wrap:balance}
+#vn-home h1 span{display:block}
+#vn-home .vn-lead{color:var(--vn-muted);font-size:17px;line-height:1.9;margin-top:24px;max-width:470px;text-wrap:pretty}
+#vn-home .vn-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+#vn-home .vn-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:49px;padding:12px 24px;border-radius:28px;font-size:14px;font-weight:500;border:1px solid #dedede;transition:background .16s,color .16s}
+#vn-home .vn-button:hover{background:#f5f5f5}
+#vn-home .vn-button-primary{background:#171717;color:#fff;border-color:#171717}
+#vn-home .vn-button-primary:hover{background:#353535;color:#fff}
+#vn-home .vn-hero-note{color:#6d6d6d;font-size:12px;margin-top:18px}
+#vn-home .vn-showcase{min-width:0;background:#f7f7f6;border:1px solid #ebebeb;border-radius:28px;padding:22px;position:relative}
+#vn-home .vn-showcase-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px;font-size:12px;color:#606060}
+#vn-home .vn-showcase-title{display:flex;align-items:center;gap:7px}
+#vn-home .vn-showcase-dots{display:flex;gap:4px}
+#vn-home .vn-showcase-dots i{display:block;width:4px;height:4px;border-radius:50%;background:#aaa}
+#vn-home .vn-image-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:12px}
+#vn-home .vn-scene{position:relative;overflow:hidden;border-radius:17px;background:#dbbdd7;height:229px}
+#vn-home .vn-scene img{width:100%;height:100%;object-fit:cover}
+#vn-home .vn-scene-small{background:#e8bed0}
+#vn-home .vn-image-tag{position:absolute;left:11px;bottom:11px;background:#fffffff2;border-radius:18px;padding:5px 10px;font-size:11px;color:#363636;line-height:1.6}
+#vn-home .vn-code-card{margin-top:13px;background:#fff;border:1px solid #e7e7e7;border-radius:17px;padding:16px 18px}
+#vn-home .vn-code-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:#696969;margin-bottom:11px}
+#vn-home .vn-code-name{display:flex;align-items:center;gap:8px;font-weight:500;color:#333}
+#vn-home .vn-code-prompt{font-size:13px;line-height:1.8;color:#383838;display:flex;align-items:baseline;gap:9px}
+#vn-home .vn-prompt-mark{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:#838383}
+#vn-home .vn-code-foot{font-size:11px;color:#747474;margin-top:9px}
+#vn-home .vn-summary{display:flex;align-items:center;justify-content:center;gap:38px;flex-wrap:wrap;padding:10px 0 38px;color:#606060;font-size:13px}
+#vn-home .vn-summary span{display:inline-flex;align-items:center;gap:8px}
+#vn-home .vn-summary svg{width:16px;height:16px}
+#vn-home .vn-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:10px 0 64px}
+#vn-home .vn-feature{border:1px solid var(--vn-line);border-radius:22px;padding:28px;background:#fff}
+#vn-home .vn-feature-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:#f3f3f3;color:#343434;margin-bottom:22px}
+#vn-home .vn-feature-icon svg{width:23px;height:23px}
+#vn-home .vn-feature h2{font-size:20px;line-height:1.4;letter-spacing:-.4px;font-weight:550;margin-bottom:11px}
+#vn-home .vn-feature p{font-size:14px;line-height:1.85;color:var(--vn-muted);max-width:31em;text-wrap:pretty}
+#vn-home .vn-supported{border-top:1px solid #ededed;padding:49px 0 52px;scroll-margin-top:24px}
+#vn-home .vn-section-top{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:25px}
+#vn-home .vn-section-top h2{font-size:28px;line-height:1.4;font-weight:550;letter-spacing:-.8px}
+#vn-home .vn-section-top p{font-size:13px;color:var(--vn-muted);margin-top:8px}
+#vn-home .vn-supported-label{font-size:11px;letter-spacing:1.7px;color:#6d6d6d;white-space:nowrap;padding-bottom:6px}
+#vn-home .vn-capabilities{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+#vn-home .vn-capability{display:flex;align-items:center;gap:16px;border:1px solid var(--vn-line);border-radius:19px;padding:22px 24px;background:#fafafa}
+#vn-home .vn-capability-icon{display:grid;place-items:center;background:white;border:1px solid #e7e7e7;border-radius:14px;width:48px;height:48px;flex-shrink:0}
+#vn-home .vn-capability-icon svg{width:24px;height:24px}
+#vn-home .vn-capability h3{font-size:17px;font-weight:550;line-height:1.4;margin-bottom:3px;letter-spacing:-.3px}
+#vn-home .vn-capability p{font-size:12px;color:#656565;line-height:1.7}
+#vn-home .vn-status{margin-left:auto;flex-shrink:0;display:inline-flex;align-items:center;gap:4px;color:#416b55;font-size:11px;background:#edf4ee;border-radius:18px;padding:5px 9px;white-space:nowrap}
+#vn-home .vn-status svg{width:12px;height:12px;stroke-width:2}
+#vn-home .vn-model-note{font-size:11px;color:#707070;margin-top:18px;line-height:1.8}
+#vn-home .vn-footer{border-top:1px solid #ededed;min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px;color:#707070;padding-block:18px}
+#vn-home .vn-footer-links{display:flex;align-items:center;gap:24px}
+#vn-home .vn-footer a{display:inline-flex;align-items:center;min-height:44px}
+#vn-home .vn-footer a:hover{color:#171717}
+@media(min-width:1700px){#vn-home .vn-shell{width:min(1320px,calc(100% - 160px))}#vn-home .vn-hero{gap:100px;padding-top:80px;padding-bottom:64px}#vn-home h1{font-size:76px}#vn-home .vn-scene{height:265px}}
+@media(max-width:1000px){#vn-home .vn-shell{width:calc(100% - 64px)}#vn-home .vn-hero{gap:36px;padding-top:44px}#vn-home h1{font-size:48px;letter-spacing:-1.6px}#vn-home .vn-lead{font-size:15px}#vn-home .vn-showcase{padding:16px}#vn-home .vn-scene{height:198px}#vn-home .vn-feature{padding:23px}#vn-home .vn-capability{padding:20px 18px;gap:12px}#vn-home .vn-status{padding:5px 7px}}
+@media(max-width:760px){#vn-home .vn-shell{width:calc(100% - 40px)}#vn-home .vn-header{min-height:80px;gap:16px}#vn-home .vn-nav{gap:18px}#vn-home .vn-nav-link:first-child{display:none}#vn-home .vn-brand{font-size:21px}#vn-home .vn-hero{grid-template-columns:1fr;gap:36px;padding:36px 0 34px}#vn-home h1{font-size:clamp(43px,8vw,60px);letter-spacing:-1.6px}#vn-home .vn-eyebrow{margin-bottom:22px}#vn-home .vn-lead{max-width:520px;font-size:16px;margin-top:22px}#vn-home .vn-actions{margin-top:26px}#vn-home .vn-showcase{max-width:560px;width:100%;padding:18px}#vn-home .vn-scene{height:240px}#vn-home .vn-summary{justify-content:flex-start;gap:22px;font-size:12px;padding-bottom:30px}#vn-home .vn-features{gap:12px;padding-bottom:40px}#vn-home .vn-feature{padding:20px 17px}#vn-home .vn-feature h2{font-size:17px}#vn-home .vn-feature p{font-size:13px}#vn-home .vn-feature-icon{margin-bottom:18px}#vn-home .vn-supported{padding:36px 0}#vn-home .vn-section-top h2{font-size:25px}#vn-home .vn-supported-label{display:none}#vn-home .vn-capabilities{grid-template-columns:1fr;gap:12px}}
+@media(max-width:480px){#vn-home .vn-nav{gap:12px;font-size:12px}#vn-home .vn-nav-link{gap:3px}#vn-home .vn-nav-link svg{width:12px;height:12px}#vn-home .vn-login{min-height:44px;padding:8px 15px}#vn-home .vn-brand{gap:7px;font-size:20px}#vn-home .vn-brand-mark{width:29px;height:29px;border-radius:9px}#vn-home .vn-hero{padding-top:27px;gap:30px}#vn-home .vn-eyebrow{font-size:11px}#vn-home h1{font-size:45px;letter-spacing:-1.8px}#vn-home .vn-lead{font-size:15px;line-height:1.9}#vn-home .vn-button{padding:12px 21px;min-height:48px}#vn-home .vn-hero-note{font-size:11px}#vn-home .vn-showcase{padding:14px;border-radius:23px}#vn-home .vn-showcase-head{font-size:11px;margin-bottom:13px}#vn-home .vn-image-grid{gap:9px}#vn-home .vn-scene{height:181px;border-radius:13px}#vn-home .vn-image-tag{font-size:10px;left:8px;bottom:8px;padding:4px 8px}#vn-home .vn-code-card{padding:14px;margin-top:10px;border-radius:14px}#vn-home .vn-code-prompt{font-size:12px}#vn-home .vn-code-foot{font-size:10px}#vn-home .vn-summary{gap:17px;font-size:11px;padding-bottom:22px}#vn-home .vn-summary span{gap:5px}#vn-home .vn-summary svg{width:14px;height:14px}#vn-home .vn-features{grid-template-columns:1fr;gap:12px;padding-bottom:34px}#vn-home .vn-feature{padding:23px;display:grid;grid-template-columns:44px 1fr;column-gap:16px}#vn-home .vn-feature-icon{grid-row:1/3;margin:0}#vn-home .vn-feature h2{font-size:18px;margin-bottom:7px}#vn-home .vn-feature p{font-size:14px}#vn-home .vn-section-top h2{font-size:23px}#vn-home .vn-section-top p{font-size:12px}#vn-home .vn-capability{padding:18px 16px;gap:12px}#vn-home .vn-capability-icon{width:42px;height:42px;border-radius:12px}#vn-home .vn-capability h3{font-size:16px}#vn-home .vn-capability p{font-size:11px}#vn-home .vn-status{font-size:10px;gap:3px}#vn-home .vn-footer{align-items:flex-start;flex-direction:column;gap:3px;padding:21px 0}#vn-home .vn-footer-links{gap:24px}}
+@media(prefers-reduced-motion:reduce){#vn-home *,#vn-home *::before,#vn-home *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<div id="vn-home" lang="zh-CN">
+  <a class="vn-skip" href="#vn-main">跳转到主要内容</a>
+  <header class="vn-header vn-shell">
+    <a class="vn-brand" href="https://sub.velunest.top/home" aria-label="Sub2API 首页">
+      <span class="vn-brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+      <span>Sub2API</span>
+    </a>
+    <nav class="vn-nav" aria-label="首页导航">
+      <a class="vn-nav-link" href="#vn-supported">支持能力</a>
+      <a class="vn-nav-link" href="https://sub.velunest.top/draw/">在线绘图<svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      <a class="vn-login" href="https://sub.velunest.top/login">登录</a>
+    </nav>
+  </header>
+  <main id="vn-main" class="vn-shell" tabindex="-1">
+    <section class="vn-hero" aria-labelledby="vn-title">
+      <div>
+        <div class="vn-eyebrow">为开发，也为创作</div>
+        <h1 id="vn-title"><span>让想法，</span><span>变成作品。</span></h1>
+        <p class="vn-lead">从 Codex 编程到 GPT Image 绘图，<br>让开发与创作，都更简单。</p>
+        <div class="vn-actions">
+          <a class="vn-button vn-button-primary" href="https://sub.velunest.top/login">立即开始<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="vn-button" href="https://sub.velunest.top/draw/">打开绘图<svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-6-6L3 21"/></svg></a>
+        </div>
+        <p class="vn-hero-note">使用本站 API Key，在熟悉的工具或浏览器中开始。</p>
+      </div>
+      <aside class="vn-showcase" aria-label="Codex 与图像创作能力示意">
+        <div class="vn-showcase-head"><span class="vn-showcase-title"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg>一点想象，无限可能</span><span class="vn-showcase-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="vn-image-grid">
+          <figure class="vn-scene"><img src="https://sub.velunest.top/draw/templates/interior.webp" alt="柔和粉紫背景中的微缩客厅创意示例" width="500" height="500" fetchpriority="high"><figcaption class="vn-image-tag">空间灵感</figcaption></figure>
+          <figure class="vn-scene vn-scene-small"><img src="https://sub.velunest.top/draw/templates/product.webp" alt="粉色背景中的香薰蜡烛产品摄影示例" width="400" height="500"><figcaption class="vn-image-tag">产品摄影</figcaption></figure>
+        </div>
+        <div class="vn-code-card">
+          <div class="vn-code-top"><span class="vn-code-name"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 6 6 6-6 6m8 0h6"/></svg>Codex</span><span>从想法到实现</span></div>
+          <p class="vn-code-prompt"><span class="vn-prompt-mark" aria-hidden="true">›</span>帮我把这个灵感，写成一个好看的页面。</p>
+          <p class="vn-code-foot">理解需求&nbsp; / &nbsp;编写代码&nbsp; / &nbsp;迭代修改</p>
+        </div>
+      </aside>
+    </section>
+    <div class="vn-summary" aria-label="平台能力概览">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-2-15-4 18"/></svg>Codex 编程</span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-6-6L3 21"/></svg>生成与编辑图片</span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m8 10V4m8 16v-7"/></svg>用量清晰可查</span>
+    </div>
+    <section class="vn-features" aria-label="平台功能">
+      <article class="vn-feature">
+        <div class="vn-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-2-15-4 18"/></svg></div>
+        <h2>让代码，更进一步。</h2>
+        <p>接入 Codex，在熟悉的开发工具里理解项目、编写代码，让想法逐步成为可用的产品。</p>
+      </article>
+      <article class="vn-feature">
+        <div class="vn-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-6-6L3 21"/></svg></div>
+        <h2>让灵感，跃然眼前。</h2>
+        <p>输入描述生成图像，上传参考图继续编辑。打开网页就能创作，完成后一键下载原图。</p>
+      </article>
+      <article class="vn-feature">
+        <div class="vn-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="4"/><path d="M3 9h18m-5 6h2"/></svg></div>
+        <h2>让使用，清晰简单。</h2>
+        <p>API Key、余额与使用记录集中管理。随时查看调用情况，把精力留给真正想做的事。</p>
+      </article>
+    </section>
+    <section id="vn-supported" class="vn-supported" aria-labelledby="vn-supported-title">
+      <div class="vn-section-top"><div><h2 id="vn-supported-title">开发与创作，都已就绪。</h2><p>选择适合你的方式，开始下一件作品。</p></div><span class="vn-supported-label">BUILD &amp; CREATE</span></div>
+      <div class="vn-capabilities">
+        <article class="vn-capability">
+          <div class="vn-capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 6 6 6-6 6m8 0h6"/></svg></div>
+          <div><h3>Codex</h3><p>代码编写 · 项目理解 · 迭代修改</p></div>
+          <span class="vn-status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>已支持</span>
+        </article>
+        <article class="vn-capability">
+          <div class="vn-capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-6-6L3 21"/></svg></div>
+          <div><h3>GPT Image</h3><p>文字生图 · 参考图编辑 · 原图下载</p></div>
+          <span class="vn-status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>已支持</span>
+        </article>
+      </div>
+      <p class="vn-model-note">实际可用模型与计费规则，以你的 API Key 所属分组及套餐为准。图片为创作示例。</p>
+    </section>
+  </main>
+  <footer class="vn-footer vn-shell"><p>Sub2API · 为每一个想法，留一个开始。</p><div class="vn-footer-links"><a href="https://sub.velunest.top/login">进入控制台</a><a href="https://sub.velunest.top/draw/">在线绘图</a></div></footer>
+</div>
